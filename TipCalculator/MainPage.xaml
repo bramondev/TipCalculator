@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="20">
+
+        <Label
+        x:Name="gorjeta"
+        Style="{StaticResource Headline}"
+        SemanticProperties.HeadingLevel="Level1"
+        Text="valor da gorjeta" />
+
+        <Entry
+        x:Name="ValueEntry"
+        Placeholder="Digite o valor do pedido" />
+
+        <HorizontalStackLayout
+        Spacing="5">
+
+        <Label
+        x:Name="tip"
+        Text="Tip:" />
+
+        <Label
+        x:Name="LabelTipValue"
+        Text="0.00"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+        Spacing="5" >
+
+        <Label
+        x:Name="TotalValue"
+        Text="Total:" />
+
+        <Label
+        x:Name="LabelTotalValue"
+        Text="0.00" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+        Spacing="5">
+
+        <Label
+        x:Name="tipporcentage"
+        Text="Tip porcentage" />
+
+        <Label
+        x:Name="PercentageValue"
+        Text="0.00%" />
+        </HorizontalStackLayout>
+
+        <Slider
+        x:Name="SliderTipPercent"
+        Maximum="100" Minimum="0" 
+        ValueChanged="SliderTipValue_ValueChanged"/>
+
+        <HorizontalStackLayout 
+        Spacing="10">
+
+        <Button
+        x:Name="QuinzeBtn"
+        Text="15%"
+        WidthRequest="180"
+        HorizontalOptions="Fill"
+        Clicked="OnQuinzeBtn_Clicked"
+        BorderColor="Black"
+        BorderWidth="2" />
+
+        <Button
+        x:Name="OnVinteBtn"
+        Text="20%"
+        WidthRequest="180"
+        HorizontalOptions="Fill"
+        Clicked="OnVinteBtn_Clicked"
+        BorderColor="Black"
+        BorderWidth="2" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+        Spacing="10"
+        HorizontalOptions="Center">
+
+        <Button
+        x:Name="OnRounddownBtn"
+        Text="Arredondar para baixo" 
+        HorizontalOptions="Fill"
+        Clicked="OnRounddownBtn_Clicked"
+        BorderColor="Black"
+        BorderWidth="2" />
+
+        <Button
+        x:Name="OnRoundupBtn"
+        Text="Arredondar para cima" 
+        HorizontalOptions="Fill"
+        Clicked="OnRoundupBtn_Clicked"
+        BorderColor="Black"
+        BorderWidth="2"/>
+
+            </HorizontalStackLayout>
+
+        <Button
+        x:Name="SobreBtn"
+        Text="Sobre o programador" 
+        HorizontalOptions="Fill"
+        Clicked="SobreBtn_Clicked"
+        BorderColor="Black"
+        BorderWidth="2"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
